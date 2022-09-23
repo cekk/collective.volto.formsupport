@@ -26,6 +26,7 @@ class FormSerializer(object):
         Otherwise, skip default values because we need them only in edit and
         to send emails from the backend.
         """
+        import pdb;pdb.set_trace()
         if "captcha" in value and value["captcha"]:
             value["captcha_props"] = getMultiAdapter(
                 (self.context, self.request),
